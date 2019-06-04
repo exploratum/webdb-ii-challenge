@@ -1,28 +1,27 @@
 const db = require('./dbConfig')
 
-
 function find() {
-    return db('zoos');
+    return db('bears');
 }
 
 function findById(id) {
-    return db('zoos')
+    return db('bears')
     .where({id})
     .first();
 }
 
 function insert(zoo) {
-    return db('zoos').insert(zoo);
+    return db('bears').insert(zoo);
 }
 
 function update(id, changes) {
-    return db('zoos')
+    return db('bears')
     .where({id})
     .update(changes)
 }
 
 function remove(id) {
-    return db('zoos')
+    return db('bears')
     .where({id})
     .del();
 }
